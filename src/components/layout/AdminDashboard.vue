@@ -1,6 +1,6 @@
 <script setup>
 import AdminSidebar from "../ui/sidebars/AdminSidebar.vue";
-import AdminNavbar from "../ui/headers/AdminNavbarAlt.vue";
+import AdminNavbar from "../ui/Headers/AdminNavbar.vue";
 import { RouterView } from "vue-router";
 </script>
 
