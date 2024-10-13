@@ -19,7 +19,8 @@ export default {
         indigo400: "#756AFF",
         indigo500: "#4318FF",
         primaryBg: "#F4F7FE",
-        glass400: "rgba(75, 0, 130, 0.16)",
+        glassIndigo400: "rgba(67, 24, 255, 0.16)",
+        glass400: "rgba(255,255,255,0.55)",
       },
       backgroundImage: {
         doctor: "url('/src/assets/image/doc.jpg')",
