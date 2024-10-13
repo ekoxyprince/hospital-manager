@@ -5,3 +5,4 @@ import AdminNavbar from "../../components/ui/Headers/AdminNavbar.vue";
 <template>
   <AdminNavbar />
 </template>
+
