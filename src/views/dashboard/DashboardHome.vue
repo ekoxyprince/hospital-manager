@@ -1,7 +1,7 @@
-<script setup></script>
+<script setup>
+import AdminNavbar from "../../components/ui/Headers/AdminNavbar.vue";
+</script>
 
 <template>
-    <div>
-        Dashboard
-    </div>
+  <AdminNavbar />
 </template>
