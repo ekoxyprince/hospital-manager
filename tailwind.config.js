@@ -17,13 +17,15 @@ export default {
         adminDashbg: "#171725",
         indigo300: "#7E73FF",
         indigo400: "#756AFF",
-        indigo500: "#5B4DFF",
+        indigo500: "#4318FF",
+        primaryBg: "#F4F7FE",
+        glass400: "rgba(75, 0, 130, 0.16)",
       },
       backgroundImage: {
         doctor: "url('/src/assets/image/doc.jpg')",
       },
       gridTemplateColumns: {
-        "dash-col": "20rem auto",
+        "dash-col": "18rem auto",
       },
     },
   },

@@ -11,10 +11,17 @@ const router = createRouter({
     {
       path: "/dashboard",
       name: "Dashboard",
-      component: import("../views/dashboard/DashboardHome.vue"),
+      component: import("../components/layout/AdminDashboard.vue"),
       children: [
         {
-          path: "/home",
+          path: "home",
+          name: "Dashboard Home",
+          component: import("../views/dashboard/admin/DashboardHome.vue"),
+        },
+        {
+          path: "staffs",
+          name: "Staffs",
+          component: import("../views/dashboard/admin/Staffs.vue"),
         },
       ],
     },
