@@ -1,4 +1,10 @@
-<script setup></script>
+<script setup>
+import { navState } from "../../../reactive/store.js";
+
+function handleToggle() {
+  navState.isToggled = !navState.isToggled;
+}
+</script>
 <template>
   <nav class="bg-[white]">
     <div
