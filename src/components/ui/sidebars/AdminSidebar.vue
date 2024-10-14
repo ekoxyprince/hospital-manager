@@ -20,15 +20,13 @@ import { ref } from "vue";
       <div class="flex flex-col space-y-1 items-center p-2 py-3 px-2">
         <img :src="pfp" class="w-[65px] h-[65px] rounded-full" alt="" />
         <h2 class="text-lg font-semibold">Doctor Doe</h2>
-        <p class="text-md text-borderColor font-semibold opacity-60">
-          General Medical Doctor
-        </p>
+        <p class="text-md text-borderColor font-semibold">General Medical Doctor</p>
       </div>
       <div class="w-full flex flex-col h-full space-y-2">
         <RouterLink
           to="home"
           class="flex space-x-4 px-12 py-[0.6rem] rounded-tr-xl rounded-br-xl hover:border-l-[0.5rem] hover:border-indigo500 transition ease-linear duration-300"
-          active-class=" border-l-[0.5rem] border-indigo500 bg-glass400 text-white"
+          active-class=" border-l-[0.5rem] border-indigo500 bg-glassIndigo400 text-white"
         >
           <MdOutlinedDashboard class="text-2xl" />
           <h2 class="text-md font-bold">Dashboard</h2>
@@ -36,7 +34,7 @@ import { ref } from "vue";
         <RouterLink
           to="staffs"
           class="flex space-x-4 px-12 py-[0.6rem] rounded-tr-xl rounded-br-xl hover:border-l-[0.5rem] hover:border-indigo500 transition ease-linear duration-300"
-          active-class=" border-l-[0.5rem] border-indigo500 bg-glass400 text-white"
+          active-class=" border-l-[0.5rem] border-indigo500 bg-glassIndigo400 text-white"
         >
           <AkPeopleGroup class="text-2xl" />
           <h2 class="text-md font-bold">Staffs</h2>
@@ -44,7 +42,7 @@ import { ref } from "vue";
         <RouterLink
           to="attendance"
           class="flex space-x-4 px-12 py-[0.6rem] rounded-tr-xl rounded-br-xl hover:border-l-[0.5rem] hover:border-indigo500 transition ease-linear duration-300"
-          active-class=" border-l-[0.5rem] border-indigo500 bg-glass400 text-white"
+          active-class=" border-l-[0.5rem] border-indigo500 bg-glassIndigo400 text-white"
         >
           <BsCalendar2Check class="text-2xl" />
           <h2 class="text-md font-bold">Attendance</h2>
