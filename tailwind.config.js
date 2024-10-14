@@ -21,6 +21,7 @@ export default {
         primaryBg: "#F4F7FE",
         glassIndigo400: "rgba(67, 24, 255, 0.16)",
         glass400: "rgba(255,255,255,0.55)",
+        darkOverlay: "rgba(0,0,0,0.25)",
       },
       backgroundImage: {
         doctor: "url('/src/assets/image/doc.jpg')",

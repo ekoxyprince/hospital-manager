@@ -6,3 +6,31 @@
 body{
     font-family: "Poppins",sans-serif;
 }
+
+.isEntered{
+   animation: enterAnimation 300ms linear forwards ;
+}
+.isLeft{
+    animation: leaveAnimation 200ms linear forwards ;
+ }
+
+@keyframes enterAnimation {
+    0%{
+       left: -100%;
+       display: none;
+    }
+    100%{
+        left: 0;
+       display: block; 
+    }
+}
+@keyframes leaveAnimation {
+    0%{
+        left: 0;
+        /* display: block;  */
+    }
+    100%{
+        left: -100%;
+        /* display: none; */
+    }
+}

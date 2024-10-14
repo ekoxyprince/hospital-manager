@@ -4,6 +4,7 @@ import { BsPeople } from "@kalimahapps/vue-icons";
 import { McInventoryLine } from "@kalimahapps/vue-icons";
 import { AnFilledMedicineBox } from "@kalimahapps/vue-icons";
 import { CaReminder } from "@kalimahapps/vue-icons";
+import ContentCard from "../../../components/ui/cards/ContentCard.vue";
 </script>
 
 <template>
@@ -65,6 +66,17 @@ import { CaReminder } from "@kalimahapps/vue-icons";
           </div>
         </div>
       </InfoCard>
+    </div>
+    <div class="flex flex-col space-y-2 md:flex-row md:space-x-2 md:space-y-0">
+      <div class="w-full">
+        <ContentCard></ContentCard>
+      </div>
+      <div class="w-full">
+        <ContentCard></ContentCard>
+      </div>
+      <div class="w-full">
+        <ContentCard></ContentCard>
+      </div>
     </div>
   </div>
 </template>
