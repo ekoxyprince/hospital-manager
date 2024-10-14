@@ -1,7 +1,19 @@
 <script setup>
 import AdminSidebar from "../ui/sidebars/AdminSidebar.vue";
 import AdminNavbar from "../ui/headers/AdminNavbarAlt.vue";
-import { RouterView } from "vue-router";
+import { RouterView, useRouter } from "vue-router";
+import { navState } from "../../reactive/store.js";
+import { onMounted } from "vue";
+
+function closeSidebar() {
+  navState.isToggled = false;
+}
+const router = useRouter();
+onMounted(() => {
+  router.afterEach(() => {
+    closeSidebar();
+  });
+});
 </script>
 
 <template>

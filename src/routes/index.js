@@ -23,6 +23,11 @@ const router = createRouter({
           name: "Staffs",
           component: import("../views/dashboard/admin/Staffs.vue"),
         },
+        {
+          path: "attendance",
+          name: "Attendance",
+          component: import("../views/dashboard/admin/Attendance.vue"),
+        },
       ],
     },
   ],

@@ -5,13 +5,28 @@ import { MdOutlinedDashboard } from "@kalimahapps/vue-icons";
 import { AkPeopleGroup } from "@kalimahapps/vue-icons";
 import { BsCalendar2Check } from "@kalimahapps/vue-icons";
 import { RouterLink, useRoute } from "vue-router";
-import { ref } from "vue";
+import { navState } from "../../../reactive/store.js";
+import { ref, defineProps } from "vue";
+
+function handleSideclick(e) {
+  if (e.target.id != "sidebar") {
+    navState.isToggled = false;
+  }
+}
 </script>
 
 <template>
-  <div class="absolute hidden md:relative md:block">
+  <div
+    id="sidebar-wrapper"
+    v-on:click="handleSideclick"
+    :class="[
+      navState.isToggled ? 'isEntered' : 'hidden',
+      'absolute md:relative z-10 md:block transition-all duration-300 w-[100%] bg-darkOverlay md:bg-none',
+    ]"
+  >
     <div
-      class="w-full bg-white h-full min-h-[100vh] shadow-lg flex flex-col space-y-3 items-center text-black relative"
+      id="sidebar"
+      class="w-[80%] md:w-full bg-white h-full min-h-[100vh] shadow-lg flex flex-col space-y-3 items-center text-black relative"
     >
       <div class="flex items-center space-x-2 p-2 py-3 px-2">
         <img :src="logo" class="w-[30px] h-[30px] rounded-full" alt="" />
