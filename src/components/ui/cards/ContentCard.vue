@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="p-2 px-4 py-4 bg-white rounded-lg shadow-md">
+  <div class="p-2 px-4 py-4 bg-white rounded-lg shadow-sm">
     <slot></slot>
   </div>
 </template>
