@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@kalimahapps/vue-icons": "^1.7.1",
+    "@primevue/themes": "^4.1.1",
+    "@vuepic/vue-datepicker": "^9.0.3",
     "primeicons": "^7.0.0",
+    "primevue": "^4.1.1",
     "vue": "^3.5.10",
     "vue-apexcharts": "^1.6.2",
     "vue-router": "^4.4.5",

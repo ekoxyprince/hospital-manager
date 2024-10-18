@@ -15,6 +15,7 @@ import ApexDonutChart from "../../../components/ui/charts/ApexDonutChart.vue";
 
 const isToggled = ref(false);
 const isToggledChart = ref(false);
+const selectedTable = ref("new");
 const selected = ref("Weekly");
 const selectedChart = ref("Weekly");
 function showToggle() {
@@ -30,6 +31,9 @@ function handleSelect(e) {
 function handleSelectChart(e) {
   selectedChart.value = e.target.innerText;
   isToggledChart.value = false;
+}
+function handleTableSelect(type) {
+  selectedTable.value = type;
 }
 </script>
 
@@ -71,59 +75,77 @@ function handleSelectChart(e) {
             </div>
             <div class="grid grid-cols-2 gap-4">
               <InfoCard
-                styles="bg-cardColor1 flex-col space-y-2 flex items-center text-lightDarkTextColor"
+                styles="bg-cardColor1 flex-col space-y-2 flex items-center text-center text-lightDarkTextColor"
               >
-                <HeOutlineGroupDiscussionMeetingx3 class="text-2xl" />
+                <HeOutlineGroupDiscussionMeetingx3 class="text-2xl md:text-xl" />
                 <div class="flex flex-col space-y-0 items-center">
-                  <p class="text-sm font-semibold">100</p>
-                  <p class="text-sm">Appointments</p>
+                  <p class="text-sm md:text-[0.65rem] xl:text-sm font-semibold">100</p>
+                  <p class="text-sm md:text-[0.65rem] xl:text-sm">Appointments</p>
                 </div>
               </InfoCard>
               <InfoCard
-                styles="bg-cardColor2 flex-col space-y-2 flex items-center text-lightBrownTextColor"
+                styles="bg-cardColor2 flex-col space-y-2 flex items-center text-center text-lightBrownTextColor"
               >
-                <ClUsers class="text-2xl" />
+                <ClUsers class="text-xl" />
                 <div class="flex flex-col space-y-0 items-center">
-                  <p class="text-sm font-semibold">100</p>
-                  <p class="text-sm">New Patients</p>
+                  <p class="text-sm md:text-[0.65rem] xl:text-sm font-semibold">100</p>
+                  <p class="text-sm md:text-[0.65rem] xl:text-sm">New Patients</p>
                 </div>
               </InfoCard>
               <InfoCard
-                styles="bg-cardColor3 flex-col space-y-2 flex items-center text-darkBrownTextColor"
+                styles="bg-cardColor3 flex-col space-y-2 flex items-center text-center text-darkBrownTextColor"
               >
-                <TaMedicineSyrup class="text-2xl" />
+                <TaMedicineSyrup class="text-xl" />
                 <div class="flex flex-col space-y-0 items-center">
-                  <p class="text-sm font-semibold">100</p>
-                  <p class="text-sm">Medicine Sold</p>
+                  <p class="text-sm md:text-[0.65rem] xl:text-sm font-semibold">100</p>
+                  <p class="text-sm md:text-[0.65rem] xl:text-sm">Medicine Sold</p>
                 </div>
               </InfoCard>
               <InfoCard
-                styles="bg-cardColor4 flex-col space-y-2 flex items-center text-lightDarkerTextColor"
+                styles="bg-cardColor4 flex-col space-y-2 flex items-center text-center text-lightDarkerTextColor"
               >
-                <HeFilledConeTestOnNets class="text-2xl" />
+                <HeFilledConeTestOnNets class="text-xl" />
                 <div class="flex flex-col space-y-0 items-center">
-                  <p class="text-sm font-semibold">100</p>
-                  <p class="text-sm">Lab Tests</p>
+                  <p class="text-sm md:text-[0.65rem] xl:text-sm font-semibold">100</p>
+                  <p class="text-sm md:text-[0.65rem] xl:text-sm">Lab Tests</p>
                 </div>
               </InfoCard>
             </div>
           </div>
         </ContentCard>
       </div>
-      <div class="w-full md:w-2/3 overflow-x-auto">
+      <div class="w-full md:w-2/3">
         <ContentCard>
           <div class="flex space-x-12 border-b border-borderColor">
-            <h3 class="text-sm font-normal py-2 border-b-2 border-lightblue500">
+            <h3
+              v-on:click="handleTableSelect.call(this, 'new')"
+              :class="[
+                selectedTable == 'new'
+                  ? 'border-b-2 border-lightblue500'
+                  : 'cursor-pointer',
+                'text-sm font-normal py-2',
+              ]"
+            >
               New Appointment
             </h3>
-            <h3 class="text-sm font-normal py-2">Completed Appointment</h3>
+            <h3
+              v-on:click="handleTableSelect.call(this, 'completed')"
+              :class="[
+                selectedTable == 'completed'
+                  ? 'border-b-2 border-lightblue500'
+                  : 'cursor-pointer',
+                'text-sm font-normal py-2 ',
+              ]"
+            >
+              Completed Appointment
+            </h3>
           </div>
           <BasicTable :tableData="appointment1Data" />
         </ContentCard>
       </div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 px-2">
-      <ContentCard>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 px-2">
+      <ContentCard styles="max-h-[20rem] overflow-y-auto">
         <div class="flex flex-col space-y-2">
           <div class="flex justify-between items-center relative">
             <h2 class="text-sm">Educational Content</h2>
@@ -134,7 +156,7 @@ function handleSelectChart(e) {
           <EducationalTile />
         </div>
       </ContentCard>
-      <ContentCard>
+      <ContentCard styles="max-h-[20rem] overflow-y-auto">
         <div class="flex flex-col space-y-2">
           <div class="flex justify-between items-center relative">
             <h2 class="text-sm">Top Medicine sold</h2>
@@ -144,7 +166,7 @@ function handleSelectChart(e) {
             </div>
             <div
               v-show="isToggledChart"
-              class="absolute top-[100%] flex flex-col right-0 space-y-1 shadow-lg bg-white rounded-md overflow-hidden"
+              class="absolute top-[100%] flex flex-col right-0 space-y-1 shadow-lg bg-white rounded-md overflow-hidden z-10"
             >
               <button
                 @click="handleSelectChart"
@@ -169,7 +191,7 @@ function handleSelectChart(e) {
           <ApexDonutChart />
         </div>
       </ContentCard>
-      <ContentCard>
+      <ContentCard styles="max-h-[20rem] overflow-y-auto">
         <div class="flex flex-col space-y-2">
           <div class="flex justify-between items-center relative">
             <h2 class="text-[0.7rem]">Patient Fee</h2>

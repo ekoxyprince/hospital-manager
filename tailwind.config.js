@@ -4,8 +4,9 @@ export default {
   theme: {
     screens: {
       sm: "580px",
-      md: "1120px",
-      lg: "1240px",
+      md: "768px",
+      lg: "976px",
+      slg: "1024px",
       xl: "1440px",
     },
     extend: {
@@ -37,7 +38,7 @@ export default {
         doctor: "url('/src/assets/image/doc.jpg')",
       },
       gridTemplateColumns: {
-        "dash-col": "18rem auto",
+        "dash-col": "17.8rem auto",
         "tile-col": "2rem auto 4rem",
         "tile2-col": "2rem auto auto",
       },

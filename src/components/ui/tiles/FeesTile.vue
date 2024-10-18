@@ -23,9 +23,9 @@ defineProps({
     </div>
     <div class="flex flex-col">
       <h3 class="text-lightDarkTextColor text-[0.85rem]">{{ data.patient }}</h3>
-      <p class="text-[0.7rem] text-red-600">{{ data.notice }}</p>
+      <p class="text-[0.75rem] sm:text-[0.7rem] text-red-600">{{ data.notice }}</p>
     </div>
-    <div class="flex items-start justify-center text-[0.85rem]">
+    <div class="flex items-start justify-center text-[0.75rem] sm:text-[0.7rem]">
       <PrimaryButton text="Request fee" />
     </div>
   </div>

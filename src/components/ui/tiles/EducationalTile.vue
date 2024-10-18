@@ -23,9 +23,9 @@ defineProps({
     </div>
     <div class="flex flex-col">
       <h3 class="text-lightDarkTextColor text-[0.85rem]">{{ data.title }}</h3>
-      <p class="text-[0.85rem] text-fadeTextColor">{{ data.author }}</p>
+      <p class="text-[0.75rem] sm:text-[0.7rem] text-fadeTextColor">{{ data.author }}</p>
     </div>
-    <div class="flex items-start justify-center text-[0.85rem]">
+    <div class="flex items-start justify-center text-[0.75rem] sm:text-[0.7rem]">
       <PrimaryButton text="Assign" />
     </div>
   </div>

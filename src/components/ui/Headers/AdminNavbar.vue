@@ -4,7 +4,9 @@ import pfp from "../../../assets/image/pfp.png";
 import { HeFilledUiMenuGrid } from "@kalimahapps/vue-icons";
 import { ClBellNotification } from "@kalimahapps/vue-icons";
 import { navState } from "../../../reactive/store.js";
+import { useRoute } from "vue-router";
 
+const route = useRoute();
 function handleToggle() {
   navState.isToggled = !navState.isToggled;
 }
@@ -14,15 +16,15 @@ function handleToggle() {
   <div class="w-full h-14 relative flex justify-between items-center p-1 px-2">
     <div class="flex space-x-2 items-center">
       <h1 class="text-xl font-[400] md:text-2xl md:font-[500] text-lightDarkTextColor">
-        Dashboard
+        {{ route.name }}
       </h1>
     </div>
     <div class="flex space-x-2 items-center p-1">
       <div
         @click="handleToggle"
-        class="cursor-pointer w-[2.5rem] h-[2.5rem] rounded-full shadow-lg active:shadow-none md:hidden flex items-center justify-center"
+        class="cursor-pointer w-[2.5rem] h-[2.5rem] rounded-full shadow-lg active:shadow-none lg:hidden flex items-center justify-center"
       >
-        <HeFilledUiMenuGrid class="text-2xl md:hidden" />
+        <HeFilledUiMenuGrid class="text-2xl lg:hidden" />
       </div>
       <div class="cursor-pointer flex items-center justify-center">
         <ClBellNotification class="text-2xl" />

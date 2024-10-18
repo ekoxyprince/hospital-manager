@@ -19,8 +19,8 @@ export const appointment1Data = {
     {
       time: "10:30 AM",
       date: "05/12/2022",
-      name: "James Taylor",
       doctor: "Dr. Chidinma",
+      name: "James Taylor",
       image: img,
     },
     {
@@ -32,3 +32,51 @@ export const appointment1Data = {
     },
   ],
 };
+
+export const patient1Data = [
+  {
+    name: "James Taylor",
+    image: img,
+    age: 22,
+    gender: "Male",
+    blood: "O+",
+    phone: "+23490849374",
+    email: "johndoe@gmail.com",
+  },
+  {
+    name: "James Taylor",
+    image: img,
+    age: 22,
+    gender: "Male",
+    blood: "O+",
+    phone: "+23490849374",
+    email: "johndoe@gmail.com",
+  },
+  {
+    name: "James Taylor",
+    image: img,
+    age: 22,
+    gender: "Male",
+    blood: "O+",
+    phone: "+23490849374",
+    email: "johndoe@gmail.com",
+  },
+  {
+    name: "James Taylor",
+    image: img,
+    age: 22,
+    gender: "Male",
+    blood: "O+",
+    phone: "+23490849374",
+    email: "johndoe@gmail.com",
+  },
+  {
+    name: "James Taylor",
+    image: img,
+    age: 22,
+    gender: "Male",
+    blood: "O+",
+    phone: "+23490849374",
+    email: "johndoe@gmail.com",
+  },
+];
