@@ -19,4 +19,9 @@ export default [
     name: "Patient Details",
     component: import("../views/dashboard/admin/Patients.vue"),
   },
+  {
+    path: "appointments",
+    name: "Apointments",
+    component: import("../views/dashboard/admin/Appointment.vue"),
+  },
 ];
