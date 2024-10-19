@@ -19,26 +19,26 @@ function handleClick(index) {
       <table>
         <thead>
           <tr>
-            <th>Patient Name</th>
+            <th>Staff Name</th>
             <th>Age</th>
             <th>Gender</th>
-            <th>Blood Group</th>
+            <th>Role</th>
             <th>Phone Number</th>
             <th>Email ID</th>
-            <th>User Action</th>
+            <th>Staff Action</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="(data, index) in tableData">
             <td>
               <div class="table_pfp">
-                <img :src="data.image" alt="" />
+                <img :src="data.images" alt="" />
                 <p>{{ data.name }}</p>
               </div>
             </td>
             <td>{{ data.age }}</td>
             <td>{{ data.gender }}</td>
-            <td>{{ data.blood }}</td>
+            <td>{{ data.role }}</td>
             <td>{{ data.phone }}</td>
             <td>{{ data.email }}</td>
             <td>

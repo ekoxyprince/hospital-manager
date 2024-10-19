@@ -80,3 +80,51 @@ export const patient1Data = [
     email: "johndoe@gmail.com",
   },
 ];
+
+export const StaffData = [
+  {
+    name: "James Watt",
+    images: img,
+    age: 23,
+    gender: "male",
+    role: "nurse",
+    phone: "23413295486",
+    email: "jamiewatt@gmail.com",
+  },
+  {
+    name: "Benjamin  Franklin",
+    images: img,
+    age: 75,
+    gender: "male",
+    role: "doctor",
+    phone: "23478354209",
+    email: "benjaminfranklin@gmail.com",
+  },
+  {
+    name: "Marie Curie",
+    images: img,
+    age: 35,
+    gender: "female",
+    role: "nurse",
+    phone: "23478453672",
+    email: "mariecurie@gmail.com",
+  },
+  {
+    name: "Albert Einstein",
+    images: img,
+    age: 85,
+    gender: "male",
+    role: "data scientist",
+    phone: "23423640964",
+    email: "alberteinstein@gmail.com",
+  },
+  {
+    name: "Elon Musk",
+    images: img,
+    age: 55,
+    gender: "male",
+    role: "manager",
+    phone: "23498365427",
+    email: "elonmusk@gmail.com",
+  },
+];

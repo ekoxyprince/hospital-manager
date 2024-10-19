@@ -8,7 +8,7 @@ import "@vuepic/vue-datepicker/dist/main.css";
 import PrimeVue from "primevue/config";
 import Aura from "@primevue/themes/aura";
 import DatePicker from "primevue/datepicker";
-
+import Dialog from "primevue/dialog";
 const app = createApp(App);
 
 app.use(router);
@@ -19,4 +19,5 @@ app.use(PrimeVue, {
 });
 app.component("VueDatePicker", VueDatePicker);
 app.component("DatePicker", DatePicker);
+app.component("Dialog", Dialog);
 app.mount("#app");

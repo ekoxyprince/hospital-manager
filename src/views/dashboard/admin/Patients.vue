@@ -11,7 +11,7 @@ const date = ref();
 
 <template>
   <div class="w-full px-2">
-    <ContentCard>
+    <ContentCard styles="w-full">
       <div class="flex space-x-12 border-b border-borderColor">
         <div class="w-full px-3 flex justify-between">
           <h3 class="text-md font-normal py-3 border-b-2 border-lightblue500">
