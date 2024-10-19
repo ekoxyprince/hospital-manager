@@ -6,12 +6,20 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  closeButtonProps: {
+    type: Object,
+    default: {
+      style: { display: "none" },
+    },
+  },
 });
+
 const { visibility: visible } = toRefs(props);
 </script>
 <template>
   <Dialog
-    @close="$emit('close-modal')"
+    @beforeClose="handleBeforeHide"
+    :closeButtonProps="closeButtonProps"
     :visible="visible"
     modal
     header="Edit Profile"
