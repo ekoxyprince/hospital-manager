@@ -8,6 +8,8 @@ export const appointment1Data = {
       name: "Micheal Davis",
       doctor: "Dr. Chidinma",
       image: img,
+      age: 28,
+      feeStatus: "paid",
     },
     {
       time: "9:30 AM",
@@ -15,6 +17,8 @@ export const appointment1Data = {
       name: "John Davis",
       doctor: "Dr. Chikezie",
       image: img,
+      age: 28,
+      feeStatus: "unpaid",
     },
     {
       time: "10:30 AM",
@@ -22,6 +26,8 @@ export const appointment1Data = {
       doctor: "Dr. Chidinma",
       name: "James Taylor",
       image: img,
+      age: 28,
+      feeStatus: "paid",
     },
     {
       time: "11:30 AM",
@@ -29,6 +35,8 @@ export const appointment1Data = {
       name: "Katerina Sift",
       doctor: "Dr. Chidinma",
       image: img,
+      age: 28,
+      feeStatus: "unpaid",
     },
   ],
 };

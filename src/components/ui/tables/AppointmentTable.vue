@@ -14,22 +14,24 @@ function handleClick(index) {
 </script>
 
 <template>
-  <div class="overflow-hidden px-3 md:max-w-[920px] xl:max-w-[100%]">
+  <div class="overflow-hidden px-3 max-w-[920px]">
     <div class="table-container">
       <table>
         <thead>
           <tr>
+            <th>Time</th>
+            <th>Date</th>
             <th>Patient Name</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Blood Group</th>
-            <th>Phone Number</th>
-            <th>Email ID</th>
+            <th>Patient Age</th>
+            <th>Doctor</th>
+            <th>Fee Status</th>
             <th>User Action</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="(data, index) in tableData">
+            <td>{{ data.time }}</td>
+            <td>{{ data.date }}</td>
             <td>
               <div class="table_pfp">
                 <img :src="data.image" alt="" />
@@ -37,38 +39,27 @@ function handleClick(index) {
               </div>
             </td>
             <td>{{ data.age }}</td>
-            <td>{{ data.gender }}</td>
-            <td>{{ data.blood }}</td>
-            <td>{{ data.phone }}</td>
-            <td>{{ data.email }}</td>
+            <td>{{ data.doctor }}</td>
             <td>
-              <div class="flex justify-center relative">
-                <div
-                  @click="handleClick.call(this, index)"
-                  class="flex flex-col space-y-1 items-center justify-center w-[2.5rem] h-[2.5rem] rounded-full cursor-pointer hover:shadow-lg active:shadow-none"
-                >
-                  <span
-                    class="w-[0.25rem] h-[0.25rem] rounded-full bg-borderColor"
-                  ></span>
-                  <span
-                    class="w-[0.25rem] h-[0.25rem] rounded-full bg-borderColor"
-                  ></span>
-                  <span
-                    class="w-[0.25rem] h-[0.25rem] rounded-full bg-borderColor"
-                  ></span>
-                </div>
-                <div
-                  :class="[
-                    isClicked[index] ? 'flex' : 'hidden',
-                    'absolute top-[100%] px-1 py-1 bg-white rounded-md shadow-md space-x-1 justify-center',
-                  ]"
-                >
-                  <MaWasteBasket class="text-red-500 cursor-pointer text-xl" />
-                  <CaWarningFilled
-                    class="text-lightblue500 cursor-pointer text-xl"
-                  />
-                  <div></div>
-                </div>
+              <div
+                :class="[
+                  data.feeStatus == 'paid' ? 'text-green-400' : 'text-rose-400',
+                  'text-sm',
+                ]"
+              >
+                {{ data.feeStatus }}
+              </div>
+            </td>
+            <td>
+              <div
+                :class="[
+                  data.feeStatus == 'paid'
+                    ? 'text-borderColor'
+                    : 'text-lightblue500 cursor-pointer',
+                  'text-[0.85rem] font-semibold',
+                ]"
+              >
+                Request Fee
               </div>
             </td>
           </tr>
