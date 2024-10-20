@@ -16,7 +16,7 @@ const handleClick = (e) => {
 </script>
 
 <template>
-  <StaffModal @close-modal="handleClick" :visibility="visible" />
+  <StaffModal v-model="visible" />
   <div class="w-full px-2">
     <ContentCard styles="w-full">
       <div class="flex space-x-12 border-b border-borderColor">

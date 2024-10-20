@@ -100,7 +100,7 @@ table,
 th,
 td {
   padding: 0.3rem;
-  text-align: justify;
+  text-align: center;
 }
 th,
 td {
