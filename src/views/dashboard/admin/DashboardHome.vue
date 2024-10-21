@@ -79,8 +79,8 @@ function handleTableSelect(type) {
               >
                 <HeOutlineGroupDiscussionMeetingx3 class="text-2xl md:text-xl" />
                 <div class="flex flex-col space-y-0 items-center">
-                  <p class="text-sm md:text-[0.65rem] xl:text-sm font-semibold">100</p>
-                  <p class="text-sm md:text-[0.65rem] xl:text-sm">Appointments</p>
+                  <p class="text-sm md:text-[0.75rem] xl:text-sm font-semibold">100</p>
+                  <p class="text-sm md:text-[0.75rem] xl:text-sm">Appointments</p>
                 </div>
               </InfoCard>
               <InfoCard
@@ -88,8 +88,8 @@ function handleTableSelect(type) {
               >
                 <ClUsers class="text-xl" />
                 <div class="flex flex-col space-y-0 items-center">
-                  <p class="text-sm md:text-[0.65rem] xl:text-sm font-semibold">100</p>
-                  <p class="text-sm md:text-[0.65rem] xl:text-sm">New Patients</p>
+                  <p class="text-sm md:text-[0.75rem] xl:text-sm font-semibold">100</p>
+                  <p class="text-sm md:text-[0.75rem] xl:text-sm">New Patients</p>
                 </div>
               </InfoCard>
               <InfoCard
@@ -97,8 +97,8 @@ function handleTableSelect(type) {
               >
                 <TaMedicineSyrup class="text-xl" />
                 <div class="flex flex-col space-y-0 items-center">
-                  <p class="text-sm md:text-[0.65rem] xl:text-sm font-semibold">100</p>
-                  <p class="text-sm md:text-[0.65rem] xl:text-sm">Medicine Sold</p>
+                  <p class="text-sm md:text-[0.75rem] xl:text-sm font-semibold">100</p>
+                  <p class="text-sm md:text-[0.75rem] xl:text-sm">Medicine Sold</p>
                 </div>
               </InfoCard>
               <InfoCard
@@ -106,8 +106,8 @@ function handleTableSelect(type) {
               >
                 <HeFilledConeTestOnNets class="text-xl" />
                 <div class="flex flex-col space-y-0 items-center">
-                  <p class="text-sm md:text-[0.65rem] xl:text-sm font-semibold">100</p>
-                  <p class="text-sm md:text-[0.65rem] xl:text-sm">Lab Tests</p>
+                  <p class="text-sm md:text-[0.75rem] xl:text-sm font-semibold">100</p>
+                  <p class="text-sm md:text-[0.75rem] xl:text-sm">Lab Tests</p>
                 </div>
               </InfoCard>
             </div>

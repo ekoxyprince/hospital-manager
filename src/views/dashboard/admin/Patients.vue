@@ -6,11 +6,17 @@ import SecondaryButton from "../../../components/ui/Buttons/SecondaryButton.vue"
 import { ClAddPlus } from "@kalimahapps/vue-icons";
 import { BySearch } from "@kalimahapps/vue-icons";
 import { ref } from "vue";
+import PatientModal from "../../../components/ui/modals/PatientModal.vue";
 const date = ref();
+const isVisible = ref(false);
+function handleModal() {
+  isVisible.value = !isVisible.value;
+}
 </script>
 
 <template>
   <div class="w-full px-2">
+    <PatientModal :visible="isVisible" @onClose="handleModal" />
     <ContentCard styles="w-full">
       <div class="flex space-x-12 border-b border-borderColor">
         <div class="w-full px-3 flex justify-between">
@@ -18,7 +24,7 @@ const date = ref();
             Patients Info
           </h3>
           <div>
-            <SecondaryButton>
+            <SecondaryButton @btnClick="handleModal">
               <div class="flex space-x-2 items-center">
                 <ClAddPlus class="text-xl" />
                 <p>Add Patient</p>
