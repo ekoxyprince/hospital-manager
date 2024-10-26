@@ -5,9 +5,11 @@ import StaffTable from "../../../components/ui/tables/StaffTable.vue";
 import SecondaryButton from "../../../components/ui/Buttons/SecondaryButton.vue";
 import { ClAddPlus } from "@kalimahapps/vue-icons";
 import { BySearch } from "@kalimahapps/vue-icons";
-import { ref } from "vue";
+import { ref, defineProps } from "vue";
 import StaffModal from "../../../components/ui/modals/StaffModal.vue";
+import RolePicker from "../../../components/ui/Rolepicker/RolePicker.vue";
 const date = ref();
+const props = defineProps({});
 const visible = ref(false);
 const handleClick = (e) => {
   console.log(e);
@@ -46,14 +48,7 @@ const handleClick = (e) => {
           />
         </div>
         <div>
-          <DatePicker
-            placeholder="Filter by date"
-            v-model="date"
-            class="border-2 border-lightblue500 rounded-3xl overflow-hidden text-lightblue500"
-            fluid
-            iconDisplay="input"
-            showIcon
-          ></DatePicker>
+          <RolePicker :tableData="StaffData" />
         </div>
       </div>
       <StaffTable :tableData="StaffData" />

@@ -97,6 +97,16 @@
             Staff Action
           </label>
         </div>
+        <div class="flex flex-col space-y-2 w-full justify-center items-center">
+          <button class="bg-blue-500 rounded-md p-1.5 text-white w-18">
+            Choose
+          </button>
+          <div class="w-full">
+            <button class="bg-blue-500 rounded-md p-1.5 text-white w-full">
+              Add
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
