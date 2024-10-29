@@ -97,8 +97,8 @@
             Staff Action
           </label>
         </div>
-        <div class="flex flex-col space-y-2 w-full justify-center items-center">
-          <button class="bg-blue-500 rounded-md p-1.5 text-white w-18">
+        <div class="flex flex-col space-y-3 w-full justify-center items-center">
+          <button class="bg-blue-500 rounded-md p-1.5 text-white w-20">
             Choose
           </button>
           <div class="w-full">
