@@ -1,67 +1,67 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarala:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sarala:wght@400;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body{
-    font-family: "Poppins",sans-serif;
-    width: 100%;
-    overflow-x: hidden;
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
 }
-a{
-    @apply text-gray500
+a {
+  @apply text-gray500;
 }
-.sarala{
-    font-family: "Sarala",sans-serif;
+.sarala {
+  font-family: "Sarala", sans-serif;
 }
 
-.isEntered{
-   animation: enterAnimation 300ms linear forwards ;
+.isEntered {
+  animation: enterAnimation 300ms linear forwards;
 }
-.isLeft{
-    animation: leaveAnimation 200ms linear forwards ;
- }
+.isLeft {
+  animation: leaveAnimation 200ms linear forwards;
+}
 /* Custom Scrollbar Styles for WebKit Browsers */
 ::-webkit-scrollbar {
-    width: 6px; /* Width of the scrollbar */
-    height: 6px; /* Height of the scrollbar for horizontal scroll */
+  width: 6px; /* Width of the scrollbar */
+  height: 6px; /* Height of the scrollbar for horizontal scroll */
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Background of the scrollbar track */
-    border-radius: 10px; /* Round corners of the track */
+  background: #f1f1f1; /* Background of the scrollbar track */
+  border-radius: 10px; /* Round corners of the track */
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888; /* Color of the scrollbar thumb */
-    border-radius: 10px; /* Round corners of the thumb */
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Round corners of the thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Color of the thumb on hover */
+  background: #555; /* Color of the thumb on hover */
 }
 
 ::-webkit-scrollbar-corner {
-    background: transparent; /* Color of the bottom-right corner */
+  background: transparent; /* Color of the bottom-right corner */
 }
 
 @keyframes enterAnimation {
-    0%{
-       left: -100%;
-       display: none;
-    }
-    100%{
-        left: 0;
-       display: block; 
-    }
+  0% {
+    left: -100%;
+    display: none;
+  }
+  100% {
+    left: 0;
+    display: block;
+  }
 }
 @keyframes leaveAnimation {
-    0%{
-        left: 0;
-        /* display: block;  */
-    }
-    100%{
-        left: -100%;
-        /* display: none; */
-    }
+  0% {
+    left: 0;
+    /* display: block;  */
+  }
+  100% {
+    left: -100%;
+    /* display: none; */
+  }
 }

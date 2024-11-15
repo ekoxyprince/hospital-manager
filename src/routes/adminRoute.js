@@ -24,4 +24,9 @@ export default [
     name: "Apointments",
     component: import("../views/dashboard/admin/Appointment.vue"),
   },
+  {
+    path: "inventory",
+    name: "Medical Inventory",
+    component: import("../views/dashboard/admin/MedInventory.vue"),
+  },
 ];

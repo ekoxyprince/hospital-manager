@@ -20,6 +20,7 @@ function handleClick(index) {
         <thead>
           <tr>
             <th>Patient Name</th>
+
             <th>Age</th>
             <th>Gender</th>
             <th>Blood Group</th>

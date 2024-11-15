@@ -102,8 +102,11 @@
             Choose
           </button>
           <div class="w-full">
-            <button class="bg-blue-500 rounded-md p-1.5 text-white w-full">
-              Add
+            <button
+              class="bg-green-500 rounded-md p-1.5 text-white w-full flex justify-center items-center"
+            >
+              <i class="pi pi-plus p-2"></i>
+              <span>Add</span>
             </button>
           </div>
         </div>

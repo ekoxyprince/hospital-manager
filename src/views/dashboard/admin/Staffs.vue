@@ -7,7 +7,6 @@ import { ClAddPlus } from "@kalimahapps/vue-icons";
 import { BySearch } from "@kalimahapps/vue-icons";
 import { ref, defineProps } from "vue";
 import StaffModal from "../../../components/ui/modals/StaffModal.vue";
-import RolePicker from "../../../components/ui/Rolepicker/RolePicker.vue";
 const date = ref();
 const props = defineProps({});
 const visible = ref(false);
@@ -47,8 +46,8 @@ const handleClick = (e) => {
             class="absolute left-3 md:left-4 top-[50%] translate-y-[-50%] text-lightDarkTextColor"
           />
         </div>
-        <div>
-          <RolePicker :tableData="StaffData" />
+        <div class="card flex justify-center">
+          
         </div>
       </div>
       <StaffTable :tableData="StaffData" />
