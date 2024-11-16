@@ -1,6 +1,6 @@
 <script setup>
-import AdminSidebar from "../ui/sidebars/AdminSidebar.vue";
 import AdminNavbar from "../ui/headers/AdminNavbar.vue";
+import AdminSidebar from "../ui/sidebars/AdminSidebar.vue";
 import { RouterView, useRouter } from "vue-router";
 import { navState } from "../../reactive/store.js";
 import { onMounted } from "vue";

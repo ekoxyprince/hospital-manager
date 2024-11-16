@@ -38,7 +38,7 @@ const handleClick = (e) => {
           </div>
         </div>
       </div>
-      <div class="flex justify-evenly items-center">
+      <div class="flex justify-evenly items-center content-center">
         <div class="relative flex">
           <input
             type="text"

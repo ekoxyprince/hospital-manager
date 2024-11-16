@@ -8,7 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AdminDashboard: typeof import('./src/components/layout/AdminDashboard.vue')['default']
-    AdminNavbar: typeof import('./src/components/ui/Headers/AdminNavbar.vue')['default']
+    AdminNavbar: typeof import('./src/components/ui/headers/AdminNavbar.vue')['default']
     AdminSidebar: typeof import('./src/components/ui/sidebars/AdminSidebar.vue')['default']
     ApexDonutChart: typeof import('./src/components/ui/charts/ApexDonutChart.vue')['default']
     AppointmentTable: typeof import('./src/components/ui/tables/AppointmentTable.vue')['default']
@@ -16,6 +16,7 @@ declare module 'vue' {
     ContentCard: typeof import('./src/components/ui/cards/ContentCard.vue')['default']
     EducationalTile: typeof import('./src/components/ui/tiles/EducationalTile.vue')['default']
     FeesTile: typeof import('./src/components/ui/tiles/FeesTile.vue')['default']
+    Filter: typeof import('./src/components/ui/filters/Filter.vue')['default']
     InfoCard: typeof import('./src/components/ui/cards/InfoCard.vue')['default']
     InstockFilter: typeof import('./src/components/ui/filters/InstockFilter.vue')['default']
     InventoryModal: typeof import('./src/components/ui/modals/InventoryModal.vue')['default']
