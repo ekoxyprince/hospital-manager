@@ -17,7 +17,7 @@
       </template>
       <template #option="slotProps">
         <div class="flex items-center">
-          <div>{{ slotProps.option.type }}</div>
+          <div>{{ slotProps.option.optionLabel }}</div>
         </div>
       </template>
       <template #dropdownicon>
