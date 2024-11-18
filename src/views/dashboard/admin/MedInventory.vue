@@ -10,7 +10,7 @@ import InventoryModal from "../../../components/ui/modals/InventoryModal.vue";
 import DatePicker from "primevue/datepicker";
 import ProductFilter from "../../../components/ui/filters/ProductFilter.vue";
 import InstockFilter from "../../../components/ui/filters/InstockFilter.vue";
-import Select from "primevue/select";
+
 const props = defineProps({});
 const visible = ref(false);
 const handleClick = (e) => {
@@ -68,44 +68,7 @@ const handleClick = (e) => {
             iconDisplay="input"
             showIcon
           />
-          <div class="card flex justify-center">
-            <Select
-              v-model="selectedType"
-              :options="InventoryData"
-              optionLabel="manufacturer"
-              placeholder="Manufacturer"
-              class="w-full lg:w-56 md:w-20"
-            >
-              <template #value="slotProps">
-                <div v-if="slotProps.value" class="flex items-center">
-                  <div>{{ slotProps.value.manufacturer }}</div>
-                </div>
-                <span v-else>
-                  {{ slotProps.placeholder }}
-                </span>
-              </template>
-              <template #option="slotProps">
-                <div class="flex items-center">
-                  <div>{{ slotProps.option.manufacturer }}</div>
-                </div>
-              </template>
-              <template #dropdownicon>
-                <i class="pi pi-sort-down-fill" />
-              </template>
-              <template #footer>
-                <div class="p-3">
-                  <Button
-                    label="Add New"
-                    fluid
-                    severity="secondary"
-                    text
-                    size="small"
-                    icon="pi pi-plus"
-                  />
-                </div>
-              </template>
-            </Select>
-          </div>
+          <!-- <ManufacturerFilter /> -->
         </div>
       </div>
       <MedInventoryTable :tableData="InventoryData" />
