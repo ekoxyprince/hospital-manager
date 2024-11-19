@@ -10,7 +10,8 @@ import InventoryModal from "../../../components/ui/modals/InventoryModal.vue";
 import DatePicker from "primevue/datepicker";
 import ProductFilter from "../../../components/ui/filters/ProductFilter.vue";
 import InstockFilter from "../../../components/ui/filters/InstockFilter.vue";
-
+import ManufacturerFilter from "../../../components/ui/filters/ManufacturerFilter.vue";
+import SelectFilter from "../../../components/ui/filters/Filtermenu/SelectFilter.vue";
 const props = defineProps({});
 const visible = ref(false);
 const handleClick = (e) => {
@@ -38,7 +39,7 @@ const handleClick = (e) => {
           </div>
         </div>
       </div>
-      <div class="flex justify-evenly items-center content-center">
+      <div class="flex justify-start items-center py-4 px-2 space-x-6">
         <div class="relative flex">
           <input
             type="text"
@@ -49,15 +50,8 @@ const handleClick = (e) => {
             class="absolute left-3 md:left-4 top-[50%] translate-y-[-50%] text-lightDarkTextColor"
           />
         </div>
-
-        <!-- <div -->
-        <!-- class="flex justify-center items-center h-9 w-9 rounded-[50%] hover:shadow-lg md:hidden lg:hidden border" -->
-        <!-- @click="handleIn" -->
-        <!-- > -->
-        <!-- <i class="pi pi-filter" v-if="!seen"></i> -->
-        <!-- <i class="pi pi-times" v-else></i> -->
-        <!-- </div> -->
-        <div class="md:flex gap-x-4 lg:flex-row md:flex-row flex-col space-y-2">
+        <SelectFilter />
+        <div class="md:flex gap-x-4 lg:flex-row md:flex-row hidden">
           <ProductFilter />
           <InstockFilter />
           <DatePicker
@@ -68,7 +62,7 @@ const handleClick = (e) => {
             iconDisplay="input"
             showIcon
           />
-          <!-- <ManufacturerFilter /> -->
+          <ManufacturerFilter />
         </div>
       </div>
       <MedInventoryTable :tableData="InventoryData" />

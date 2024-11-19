@@ -24,6 +24,7 @@ declare module 'vue' {
     InfoCard: typeof import('./src/components/ui/cards/InfoCard.vue')['default']
     InstockFilter: typeof import('./src/components/ui/filters/InstockFilter.vue')['default']
     InventoryModal: typeof import('./src/components/ui/modals/InventoryModal.vue')['default']
+    Manufacturer: typeof import('./src/components/ui/filters/Manufacturer.vue')['default']
     ManufacturerFilter: typeof import('./src/components/ui/filters/ManufacturerFilter.vue')['default']
     MedInventoryTable: typeof import('./src/components/ui/tables/MedInventoryTable.vue')['default']
     PatientModal: typeof import('./src/components/ui/modals/PatientModal.vue')['default']
@@ -33,6 +34,7 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SecondaryButton: typeof import('./src/components/ui/Buttons/SecondaryButton.vue')['default']
+    SelectFilter: typeof import('./src/components/ui/filters/Filtermenu/SelectFilter.vue')['default']
     StaffModal: typeof import('./src/components/ui/modals/StaffModal.vue')['default']
     StaffTable: typeof import('./src/components/ui/tables/StaffTable.vue')['default']
   }

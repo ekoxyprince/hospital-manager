@@ -3,13 +3,13 @@
     <Select
       v-model="selectedType"
       :options="InventoryData"
-      :optionLabel="optionLabel"
-      :placeholder="placeHolder"
+      optionLabel="manufacturer"
+      placeholder="Manufacturer"
       class="w-full lg:w-56 md:w-20"
     >
       <template #value="slotProps">
         <div v-if="slotProps.value" class="flex items-center">
-          <div>{{ slotProps.value.placeHolder }}</div>
+          <div>{{ slotProps.value.placeholder }}</div>
         </div>
         <span v-else>
           {{ slotProps.placeholder }}
@@ -17,7 +17,7 @@
       </template>
       <template #option="slotProps">
         <div class="flex items-center">
-          <div>{{ slotProps.option.optionLabel }}</div>
+          <div>{{ slotProps.option.manufacturer }}</div>
         </div>
       </template>
       <template #dropdownicon>
@@ -45,9 +45,4 @@ import { defineProps, ref } from "vue";
 import { InventoryData } from "../../../constants/data/tabledata.js";
 import Select from "primevue/select";
 const selectedType = ref();
-
-const props = defineProps({
-  optionLabel: String,
-  placeHolder: String,
-});
 </script>
