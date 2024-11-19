@@ -10,7 +10,7 @@
       </div>
     </div>
     <div
-      class="bg-[rgb(4, 5, 5)] flex-col space-y-4 p-5 justify-center rounded-md min-w-[7rem] max-w-[7rem] relative shadow-md"
+      class="bg-[rgb(4, 5, 5)] flex-col space-y-4 p-5 justify-center rounded-md min-w-[7rem] max-w-[7rem] relative shadow-md Hide-menu"
       v-if="showValue"
     >
       <InstockFilter />
@@ -38,10 +38,32 @@
 import InstockFilter from "../InstockFilter.vue";
 import ManufacturerFilter from "../ManufacturerFilter.vue";
 import ProductFilter from "../ProductFilter.vue";
-import { ref } from "vue";
-
+import { ref, watchEffect } from "vue";
+import { computed, onBeforeUnmount, onMounted } from "vue";
 const showValue = ref(false);
 const toggleValue = () => {
   showValue.value = !showValue.value;
 };
+const screenSize = ref(window.innerWidth);
+const smallScreenSize = computed(() => {
+  screenSize.value < 768;
+});
+const updateViewportWidth = () => {
+  screenSize.value = window.innerWidth;
+};
+
+// Lifecycle hooks to manage event listeners
+onMounted(() => {
+  window.addEventListener("resize", updateViewportWidth);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", updateViewportWidth);
+});
+
+watchEffect(() => {
+  if (smallScreenSize.value && showValue.value) {
+    showValue.value = false;
+  }
+});
 </script>
