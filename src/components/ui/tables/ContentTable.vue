@@ -14,21 +14,16 @@ function handleClick(index) {
 </script>
 
 <template>
-  <div class="overflow-hidden px-3 md:max-w-[920px] xl:max-w-[100%]">
-    <div class="table-container">
-      <table>
-        <!-- <thead> -->
-        <!-- <tr> -->
-        <!-- <th>Patient Name</th> -->
-
-        <!-- <th>Age</th> -->
-        <!-- <th>Gender</th> -->
-        <!-- <th>Blood Group</th> -->
-        <!-- <th>Phone Number</th> -->
-        <!-- <th>Email ID</th> -->
-        <!-- <th>User Action</th> -->
-        <!-- </tr> -->
-        <!-- </thead> -->
+  <div class="overflow-hidden px-3 md:max-w-[990px] xl:max-w-[100%] bg-red-500">
+    <div class="table-container bg-yellow-500">
+      <table class="bg-blue-500 w-full">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Assign Content</th>
+          </tr>
+        </thead>
         <tbody>
           <tr v-for="(data, index) in tableData" :key="data.name">
             <td>
@@ -36,7 +31,11 @@ function handleClick(index) {
                 <img :src="data.img" alt="" />
                 <p>{{ data.title }}</p>
               </div>
-              <span class="text">{{ data.author }}</span>
+            </td>
+            <td>
+              <div>
+                <span class="text-[grey]">{{ data.author }}</span>
+              </div>
             </td>
             <td>
               <div class="flex justify-center relative">
@@ -79,7 +78,6 @@ function handleClick(index) {
   width: 100%;
   height: 60vh;
   overflow: auto;
-  text-align: center;
 }
 table {
   max-width: 100%;
