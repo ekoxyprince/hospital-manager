@@ -29,4 +29,9 @@ export default [
     name: "Medical Inventory",
     component: import("../views/dashboard/admin/MedInventory.vue"),
   },
+  {
+    path: "education",
+    name: "Educational Content",
+    component: import("../views/dashboard/admin/EducationalContent.vue"),
+  },
 ];

@@ -46,7 +46,7 @@ const toggleValue = () => {
 };
 const screenSize = ref(window.innerWidth);
 const smallScreenSize = computed(() => {
-  screenSize.value < 768;
+  screenSize.value >= 768;
 });
 const updateViewportWidth = () => {
   screenSize.value = window.innerWidth;
