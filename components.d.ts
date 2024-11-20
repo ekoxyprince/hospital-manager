@@ -16,6 +16,7 @@ declare module 'vue' {
     AppointmentTable: typeof import('./src/components/ui/tables/AppointmentTable.vue')['default']
     BasicTable: typeof import('./src/components/ui/tables/BasicTable.vue')['default']
     ContentCard: typeof import('./src/components/ui/cards/ContentCard.vue')['default']
+    ContentTable: typeof import('./src/components/ui/tables/ContentTable.vue')['default']
     EducationalTile: typeof import('./src/components/ui/tiles/EducationalTile.vue')['default']
     FeesTile: typeof import('./src/components/ui/tiles/FeesTile.vue')['default']
     Filter: typeof import('./src/components/ui/filters/Filter.vue')['default']
@@ -35,6 +36,7 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     SecondaryButton: typeof import('./src/components/ui/Buttons/SecondaryButton.vue')['default']
     SelectFilter: typeof import('./src/components/ui/filters/Filtermenu/SelectFilter.vue')['default']
+    ShareContent: typeof import('./src/components/ui/modals/ShareContent.vue')['default']
     StaffModal: typeof import('./src/components/ui/modals/StaffModal.vue')['default']
     StaffTable: typeof import('./src/components/ui/tables/StaffTable.vue')['default']
   }

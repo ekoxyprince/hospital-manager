@@ -10,7 +10,7 @@
         </button>
       </div>
       <div
-        class="flex flex-col space-y-3 items-center min-w-[30rem] items-start space-y-6"
+        class="flex flex-col space-y-3 items-center min-w-[20rem] md:min-w-[30rem] items-start space-y-6"
       >
         <div class="flex flex-col relative form-group w-[97%]">
           <input
@@ -119,7 +119,23 @@ const props = defineProps({
     default: false,
   },
 });
-
+const emit = defineEmits(["onclick", "onclose"]);
+const handler = (e) => {
+  if (e.target.id === "par") {
+    emit("onclick");
+  }
+};
+const isVisible = ref(props.modelValue);
+const closeDialog = () => {
+  isVisible.value = false;
+  emit("update:modalValue", false);
+};
+watch(
+  () => props.modelValue,
+  (newValue) => {
+    isVisible.value = newValue;
+  }
+);
 </script>
 
 <style>

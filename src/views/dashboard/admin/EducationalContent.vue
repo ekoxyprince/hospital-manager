@@ -1,12 +1,12 @@
 <script setup>
 import ContentCard from "../../../components/ui/cards/ContentCard.vue";
-import { patient1Data } from "../../../constants/data/tabledata.js";
-import PatientTable from "../../../components/ui/tables/PatientTable.vue";
+import ContentTable from "../../../components/ui/tables/ContentTable.vue";
 import SecondaryButton from "../../../components/ui/Buttons/SecondaryButton.vue";
 import { ClAddPlus } from "@kalimahapps/vue-icons";
 import { BySearch } from "@kalimahapps/vue-icons";
 import { ref } from "vue";
 import PatientModal from "../../../components/ui/modals/PatientModal.vue";
+import { educationalData } from "../../../constants/data/tiledata.js";
 const date = ref();
 const isVisible = ref(false);
 function handleModal() {
@@ -21,13 +21,13 @@ function handleModal() {
       <div class="flex space-x-12 border-b border-borderColor">
         <div class="w-full px-3 flex justify-between">
           <h3 class="text-md font-normal py-3 border-b-2 border-lightblue500">
-            Patients Info
+            Education Content
           </h3>
           <div>
             <SecondaryButton @btnClick="handleModal">
               <div class="flex space-x-2 items-center">
                 <ClAddPlus class="text-xl" />
-                <p>Add Patient</p>
+                <p>Share Content</p>
               </div>
             </SecondaryButton>
           </div>
@@ -55,7 +55,7 @@ function handleModal() {
           ></DatePicker>
         </div>
       </div>
-      <PatientTable :tableData="patient1Data" />
+      <ContentTable :tableData="educationalData" />
     </ContentCard>
   </div>
 </template>

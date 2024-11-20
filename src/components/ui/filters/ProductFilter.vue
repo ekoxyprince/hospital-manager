@@ -5,7 +5,7 @@
       :options="InventoryData"
       optionLabel="type"
       placeholder="Product Type"
-      class="w-full lg:w-56 md:w-20"
+      class="w-full lg:w-56 md:w-20 rounded-[9rem]"
     >
       <template #value="slotProps">
         <div v-if="slotProps.value" class="flex items-center">
@@ -41,13 +41,8 @@
 
 <script setup>
 import Button from "primevue/button";
-import { defineProps, ref } from "vue";
+import { ref } from "vue";
 import { InventoryData } from "../../../constants/data/tabledata.js";
 import Select from "primevue/select";
 const selectedType = ref();
-
-const props = defineProps({
-  optionLabel: String,
-  placeHolder: String,
-});
 </script>

@@ -32,7 +32,7 @@ function handleClick(index) {
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(data, index) in tableData">
+          <tr v-for="(data, index) in tableData" :key="data.name">
             <td>
               <div class="table_pfp">
                 <input type="checkbox" class="mr-2" />

@@ -10,7 +10,7 @@
         </button>
       </div>
       <div
-        class="flex flex-col space-y-3 items-center min-w-[30rem] items-start space-y-6"
+        class="flex flex-col space-y-3 items-center min-w-[20rem] md:min-w-[30rem] items-start space-y-6"
       >
         <div class="flex flex-col relative form-group w-[97%]">
           <input

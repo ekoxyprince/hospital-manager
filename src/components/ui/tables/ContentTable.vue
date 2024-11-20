@@ -17,30 +17,27 @@ function handleClick(index) {
   <div class="overflow-hidden px-3 md:max-w-[920px] xl:max-w-[100%]">
     <div class="table-container">
       <table>
-        <thead>
-          <tr>
-            <th>Staff Name</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Role</th>
-            <th>Phone Number</th>
-            <th>Email ID</th>
-            <th>Staff Action</th>
-          </tr>
-        </thead>
+        <!-- <thead> -->
+        <!-- <tr> -->
+        <!-- <th>Patient Name</th> -->
+
+        <!-- <th>Age</th> -->
+        <!-- <th>Gender</th> -->
+        <!-- <th>Blood Group</th> -->
+        <!-- <th>Phone Number</th> -->
+        <!-- <th>Email ID</th> -->
+        <!-- <th>User Action</th> -->
+        <!-- </tr> -->
+        <!-- </thead> -->
         <tbody>
           <tr v-for="(data, index) in tableData" :key="data.name">
             <td>
               <div class="table_pfp">
-                <img :src="data.images" alt="" />
-                <p>{{ data.name }}</p>
+                <img :src="data.img" alt="" />
+                <p>{{ data.title }}</p>
               </div>
+              <span class="text">{{ data.author }}</span>
             </td>
-            <td>{{ data.age }}</td>
-            <td>{{ data.gender }}</td>
-            <td>{{ data.role }}</td>
-            <td>{{ data.phone }}</td>
-            <td>{{ data.email }}</td>
             <td>
               <div class="flex justify-center relative">
                 <div
@@ -82,6 +79,7 @@ function handleClick(index) {
   width: 100%;
   height: 60vh;
   overflow: auto;
+  text-align: center;
 }
 table {
   max-width: 100%;
@@ -100,7 +98,7 @@ table,
 th,
 td {
   padding: 0.3rem;
-  text-align: center;
+  text-align: justify;
 }
 th,
 td {
@@ -111,6 +109,9 @@ tr {
 }
 tr:last-child {
   @apply border-b-0;
+}
+tr:nth-child(n) {
+  @apply hover:shadow-xl;
 }
 .table_pfp {
   @apply flex items-center space-x-1.5;
@@ -123,8 +124,5 @@ table th {
 }
 table td {
   @apply text-[11px] md:text-[15px] font-[400] text-[#595959];
-}
-.isEntered {
-  animation: enterAnimation 300ms linear forwards;
 }
 </style>
