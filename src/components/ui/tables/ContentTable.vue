@@ -16,7 +16,7 @@ function handleClick(index) {
 <template>
   <div class="overflow-hidden px-3 md:max-w-[920px] xl:max-w-[100%]">
     <div class="table-container">
-      <table>
+      <table class="w-[80%]">
         <thead>
           <tr>
             <th>Title</th>
