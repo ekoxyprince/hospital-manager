@@ -1,7 +1,7 @@
 <script setup>
 import { defineProps } from "vue";
-import { MaWasteBasket } from "@kalimahapps/vue-icons";
-import { CaWarningFilled } from "@kalimahapps/vue-icons";
+
+import SecondaryButton from "../Buttons/SecondaryButton.vue";
 import { ref } from "vue";
 const props = defineProps({
   tableData: Array,
@@ -14,9 +14,9 @@ function handleClick(index) {
 </script>
 
 <template>
-  <div class="overflow-hidden px-3 md:max-w-[990px] xl:max-w-[100%] bg-red-500">
-    <div class="table-container bg-yellow-500">
-      <table class="bg-blue-500 w-full">
+  <div class="overflow-hidden px-3 md:max-w-[920px] xl:max-w-[100%]">
+    <div class="table-container">
+      <table>
         <thead>
           <tr>
             <th>Title</th>
@@ -25,47 +25,18 @@ function handleClick(index) {
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(data, index) in tableData" :key="data.name">
+          <tr v-for="data in tableData" :key="data.title">
             <td>
               <div class="table_pfp">
                 <img :src="data.img" alt="" />
                 <p>{{ data.title }}</p>
               </div>
             </td>
+            <td>{{ data.author }}</td>
             <td>
-              <div>
-                <span class="text-[grey]">{{ data.author }}</span>
-              </div>
-            </td>
-            <td>
-              <div class="flex justify-center relative">
-                <div
-                  @click="handleClick.call(this, index)"
-                  class="flex flex-col space-y-1 items-center justify-center w-[2.5rem] h-[2.5rem] rounded-full cursor-pointer hover:shadow-lg active:shadow-none"
-                >
-                  <span
-                    class="w-[0.25rem] h-[0.25rem] rounded-full bg-borderColor"
-                  ></span>
-                  <span
-                    class="w-[0.25rem] h-[0.25rem] rounded-full bg-borderColor"
-                  ></span>
-                  <span
-                    class="w-[0.25rem] h-[0.25rem] rounded-full bg-borderColor"
-                  ></span>
-                </div>
-                <div
-                  :class="[
-                    isClicked[index] ? 'flex' : 'hidden',
-                    'absolute top-[100%] px-1 py-1 bg-white rounded-md shadow-md space-x-1 justify-center',
-                  ]"
-                >
-                  <MaWasteBasket class="text-red-500 cursor-pointer text-xl" />
-                  <CaWarningFilled
-                    class="text-lightblue500 cursor-pointer text-xl"
-                  />
-                  <div></div>
-                </div>
-              </div>
+              <SecondaryButton>
+                <p>Assign</p>
+              </SecondaryButton>
             </td>
           </tr>
         </tbody>
@@ -96,7 +67,7 @@ table,
 th,
 td {
   padding: 0.3rem;
-  text-align: justify;
+  text-align: center;
 }
 th,
 td {
@@ -107,9 +78,6 @@ tr {
 }
 tr:last-child {
   @apply border-b-0;
-}
-tr:nth-child(n) {
-  @apply hover:shadow-xl;
 }
 .table_pfp {
   @apply flex items-center space-x-1.5;
@@ -122,5 +90,8 @@ table th {
 }
 table td {
   @apply text-[11px] md:text-[15px] font-[400] text-[#595959];
+}
+.isEntered {
+  animation: enterAnimation 300ms linear forwards;
 }
 </style>
