@@ -51,6 +51,7 @@ export const patient1Data = [
     blood: "O+",
     phone: "+23490849374",
     email: "johndoe@gmail.com",
+    id: 1,
   },
   {
     name: "James Taylor",
@@ -60,6 +61,7 @@ export const patient1Data = [
     blood: "O+",
     phone: "+23490849374",
     email: "johndoe@gmail.com",
+    id: 2,
   },
   {
     name: "James Taylor",
@@ -69,6 +71,7 @@ export const patient1Data = [
     blood: "O+",
     phone: "+23490849374",
     email: "johndoe@gmail.com",
+    id: 3,
   },
   {
     name: "James Taylor",
@@ -78,6 +81,7 @@ export const patient1Data = [
     blood: "O+",
     phone: "+23490849374",
     email: "johndoe@gmail.com",
+    id: 4,
   },
   {
     name: "James Taylor",
@@ -87,6 +91,7 @@ export const patient1Data = [
     blood: "O+",
     phone: "+23490849374",
     email: "johndoe@gmail.com",
+    id: 5,
   },
 ];
 

@@ -15,6 +15,7 @@ declare module 'vue' {
     App: typeof import('./src/components/ui/filters/my-vue-project/node_modules/@vue/cli-plugin-router/generator/template/src/App.vue')['default']
     AppointmentTable: typeof import('./src/components/ui/tables/AppointmentTable.vue')['default']
     BasicTable: typeof import('./src/components/ui/tables/BasicTable.vue')['default']
+    CheckButton: typeof import('./src/components/ui/Buttons/CheckButton.vue')['default']
     ContentCard: typeof import('./src/components/ui/cards/ContentCard.vue')['default']
     ContentTable: typeof import('./src/components/ui/tables/ContentTable.vue')['default']
     EducationalTile: typeof import('./src/components/ui/tiles/EducationalTile.vue')['default']

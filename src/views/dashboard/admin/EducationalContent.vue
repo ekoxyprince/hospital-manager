@@ -5,6 +5,7 @@ import SecondaryButton from "../../../components/ui/Buttons/SecondaryButton.vue"
 import { ClAddPlus } from "@kalimahapps/vue-icons";
 import { BySearch } from "@kalimahapps/vue-icons";
 import { ref } from "vue";
+import { patient1Data } from "../../../constants/data/tabledata.js";
 import { educationalData } from "../../../constants/data/tiledata.js";
 import ShareContent from "../../../components/ui/modals/ShareContent.vue";
 const date = ref();
@@ -19,7 +20,7 @@ function handleModal() {
     <ShareContent
       v-model="isVisible"
       @onclick="handleModal"
-      :modalData="educationalData"
+      :modalData="patient1Data"
     />
     <ContentCard styles="w-full">
       <div class="flex space-x-12 border-b border-borderColor">

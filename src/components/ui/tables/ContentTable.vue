@@ -32,6 +32,7 @@ function handleClick(index) {
                 <p>{{ data.title }}</p>
               </div>
             </td>
+
             <td>{{ data.author }}</td>
             <td>
               <SecondaryButton>
