@@ -7,13 +7,23 @@
         <h2>{{ title }}</h2>
         <button @click="closeDialog" class="hover:text-red-600">
           <i
-            class="pi pi-times"
+            class="pi pi-times hover:text-{red}"
             style="font-size: 20px; color: rgb(198, 187, 190)"
           ></i>
         </button>
       </div>
+      <div class="relative flex">
+        <input
+          type="text"
+          placeholder="Search"
+          class="bg-primaryOverlay py-1.5 outline-none pl-8 md:pl-10 rounded-3xl max-w-full self-center"
+        />
+        <BySearch
+          class="absolute left-3 md:left-4 top-[50%] translate-y-[-50%] text-lightDarkTextColor"
+        />
+      </div>
       <div
-        class="flex flex-col space-y-3 items-start min-w-[20rem] md:min-w-[30rem] space-y-6"
+        class="flex flex-col space-y-3 items-start min-w-[20rem] md:min-w-[30rem] space-y-6 pt-4"
       >
         <div v-for="data in modalData" :key="data.title" class="w-[100%]">
           <div class="flex items-center justify-between space-x-1.5">
@@ -26,6 +36,9 @@
             <input type="checkbox" class="size-4 rounded" />
           </div>
         </div>
+        <SecondaryButton class="w-[95%] self-center">
+          Assign Content
+        </SecondaryButton>
       </div>
     </div>
   </div>
@@ -34,7 +47,7 @@
 <script setup>
 import { ref, watch, defineProps, defineEmits } from "vue";
 import { BySearch } from "@kalimahapps/vue-icons";
-
+import SecondaryButton from "../Buttons/SecondaryButton.vue";
 const props = defineProps({
   title: {
     type: String,
@@ -88,7 +101,7 @@ watch(
 .dialog-container {
   background: white;
   padding: 20px;
-  border-radius: 2rem;
+  border-radius: 4rem;
 }
 .dialog-header {
   position: relative;
