@@ -24,6 +24,7 @@ declare module 'vue' {
     HelloWorld: typeof import('./src/components/ui/filters/my-vue-project/node_modules/@vue/cli-service/generator/template/src/components/HelloWorld.vue')['default']
     HomeView: typeof import('./src/components/ui/filters/my-vue-project/node_modules/@vue/cli-plugin-router/generator/template/src/views/HomeView.vue')['default']
     InfoCard: typeof import('./src/components/ui/cards/InfoCard.vue')['default']
+    InputCards: typeof import('./src/components/ui/cards/InputCards.vue')['default']
     InstockFilter: typeof import('./src/components/ui/filters/InstockFilter.vue')['default']
     InventoryModal: typeof import('./src/components/ui/modals/InventoryModal.vue')['default']
     Manufacturer: typeof import('./src/components/ui/filters/Manufacturer.vue')['default']

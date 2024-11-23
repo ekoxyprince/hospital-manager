@@ -1,5 +1,4 @@
 import eduImg1 from "../../assets/image/course1.jpg";
-
 export const educationalData = [
   {
     title: "Top 10 healthy foods",
@@ -25,5 +24,12 @@ export const educationalData = [
     title: "Healthy Habits to Follow",
     author: "By Joel brown",
     img: eduImg1,
+  },
+];
+
+const usersettings = [
+  {
+    name: "Prince Dennis",
+    email: "denniseinstien@gmail.com",
   },
 ];

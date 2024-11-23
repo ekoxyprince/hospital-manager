@@ -1,10 +1,9 @@
 <script setup>
 import ContentCard from "../../../components/ui/cards/ContentCard.vue";
-import { patient1Data } from "../../../constants/data/tabledata.js";
-import PatientTable from "../../../components/ui/tables/PatientTable.vue";
 import SecondaryButton from "../../../components/ui/Buttons/SecondaryButton.vue";
 import { ClAddPlus } from "@kalimahapps/vue-icons";
 import { BySearch } from "@kalimahapps/vue-icons";
+import InfoCards from "../../../components/ui/cards/InfoCard.vue";
 import { ref } from "vue";
 import PatientModal from "../../../components/ui/modals/PatientModal.vue";
 const date = ref();
@@ -43,6 +42,23 @@ function handleModal() {
           <BySearch
             class="absolute left-3 md:left-4 top-[50%] translate-y-[-50%] text-lightDarkTextColor"
           />
+        </div>
+      </div>
+      <div class="flex flex-col items-start space-y-3">
+        <h1 class="text-[1.3rem]">Account</h1>
+        <div class="flex items-center justify-start space-x-3 w-[80%]">
+          <img src="../../../assets/image/pfp.png" alt="" />
+          <div class="flex flex-col">
+            <h2 class="">Prince Dennis</h2>
+
+            <span class="text-[0.56rem] text-[grey]"
+              >denniseinstien@gmail.com</span
+            >
+          </div>
+        </div>
+        <div>
+          <h2>Subscription</h2>
+          <InputCards></InputCards>
         </div>
       </div>
     </ContentCard>
