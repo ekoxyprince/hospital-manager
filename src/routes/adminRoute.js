@@ -34,4 +34,9 @@ export default [
     name: "Educational Content",
     component: import("../views/dashboard/admin/EducationalContent.vue"),
   },
+  {
+    path: "settings",
+    name: "Settings",
+    component: import("../views/dashboard/admin/Settings.vue"),
+  },
 ];
