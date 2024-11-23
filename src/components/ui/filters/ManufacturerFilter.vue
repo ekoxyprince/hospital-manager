@@ -41,7 +41,7 @@
 
 <script setup>
 import Button from "primevue/button";
-import { defineProps, ref } from "vue";
+import { ref } from "vue";
 import { InventoryData } from "../../../constants/data/tabledata.js";
 import Select from "primevue/select";
 const selectedType = ref();

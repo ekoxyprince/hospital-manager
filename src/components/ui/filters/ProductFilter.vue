@@ -5,7 +5,7 @@
       :options="InventoryData"
       optionLabel="type"
       placeholder="Product Type"
-      class="w-full lg:w-56 md:w-20 rounded-[9rem]"
+      class="w-full lg:w-56 md:w-20 "
     >
       <template #value="slotProps">
         <div v-if="slotProps.value" class="flex items-center">
